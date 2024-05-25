@@ -1,0 +1,56 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #FFAA1C;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+}
+
+.header_text {
+    font-family: 'Nunito', sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.grid_container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns to fit the center image */
+    grid-template-rows: repeat(3, auto); /* 3 rows to fit the center image */
+    gap: 10px;
+    justify-items: center;
+    align-items: center;
+}
+
+.gif_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gif_image {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.gif_image:hover {
+    transform: scale(1.1);
+}
+
+
+/* Specific styling for the center gif */
+.gif {
+    grid-column: 2 / span 1; /* Center in the middle column */
+    grid-row: 2 / span 1;    /* Center in the middle row */
+    width: 100%;
+    max-width: 300px; /* Make the central GIF larger */
+}
